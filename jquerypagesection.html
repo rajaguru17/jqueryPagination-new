@@ -1,0 +1,129 @@
+<!--
+Developer : R.Rajaguru
+Mail-id : rguru1711@gmail.com
+
+This html is only to show the view and parameters used for this pagination part.
+The style used in this page is only for this html
+The pagination related CSS is updated in "jquery-pagesection.css"
+
+-->
+
+<html>
+	<title>
+	 Jquery Pagination New
+	</title>
+	<style>
+	 .margin-lft{
+			margin-left : 20px;
+	 }
+	 table, th, td {
+      background: #f2f2f2 none repeat scroll 0 0;
+      border: 1px solid #fff;
+      border-collapse: collapse;
+      font-size:15px;
+     }
+     th, td {
+      padding: 2px 5px;
+      text-align: left;
+     }
+     pre {
+		background-color: #f5f5f5;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		color: #333;
+		display: block;
+		font-size: 13px;
+		line-height: 1.42857;
+		margin: 0 0 10px;
+		padding: 9.5px;
+		word-break: break-all;
+		word-wrap: break-word;
+    }
+    .prcontnt-tmp {
+     font-size: 12px;
+     height: 175px;
+     width: 550px;
+    }
+    .fn-clr{
+		color:#5D4037;
+		margin-bottom:10px;
+	}
+
+	</style>
+	<link href="jquery-pagesection.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery-pagesection.min.js"></script>
+<body>
+  <div>
+	 <h3 class="fn-clr">Jquery pagination New</h3>
+	 <div id="pageDiv" class="margin-lft">
+		<h5 class="fn-clr">Pagination design</h5>
+     </div>
+     <div class="margin-lft">
+		<h5 class="fn-clr">Pagination Attributes</h5>
+		<div class="col-md-12">
+		<table>
+			<tbody>
+			<tr>
+				<th>S.no</th>
+				<th>Option Name</th>
+				<th>Action</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>1.</td>
+				<td>totalItems</td>
+				<td>optional (default value 1)</td>
+				<td>The total number of items in the page should be sent so that it will calculate the total pages along with the itemsPerPage.</td>
+			</tr>
+			<tr>
+				<td>2.</td>
+				<td>itemsPerPage</td>
+				<td>optional (default value 1)</td>
+				<td>The total number of items in one page should be sent so that it will calculate the total pages along with the totalItems.</td>
+			</tr>
+			<tr>
+				<td>3.</td>
+				<td>currentPage</td>
+				<td>optional (default value 1)</td>
+				<td>This will set the page to the current value.</td>
+			</tr>
+			</tbody>
+		</table>
+		</div>
+     </div>
+	 <div class="margin-lft">
+		<h5 class="fn-clr">Pagination call function</h5>
+		<pre class="prcontnt-tmp">
+			$(function() {
+				$(selector).pagesection({
+					totalItems :1,
+					itemsPerPage : 1,
+					currentPage : 1,
+					onPageChange : function(page){
+						//will get the current page
+					}
+			 });
+            });
+		</pre>
+     </div>
+     <div class="margin-lft">
+		<h5 class="fn-clr">Feedback</h5>
+		<div>For any feedback please comment on <a href="https://github.com/rajaguru17/jqueryPagination-new" target="_blank">Jquery pagination New on GitHub</a></div>
+     </div>
+  </div>
+</body>
+<script>
+	$(function() {
+        $("#pageDiv").pagesection({
+			totalItems :1,
+			itemsPerPage : 1,
+			currentPage : 1,
+			onPageChange : function(page){
+				//will get the current page
+			}
+	 });
+    });
+</script>
+
+</html>
